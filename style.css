@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: rgb(132, 191, 101);
+}
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.qrLabel {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  margin: 0 auto;
+}
+
+.container {
+  width: 500px;
+  padding: 50px 50px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0px 5px 50px #4b4b4b);
+  display: flex;
+  flex-direction: column;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.container input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #494eea;
+  outline: 0;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+}
+
+.container .buttonContainer {
+  display: flex;
+  gap: 25px;
+}
+
+.container .genButton,
+.container .apagarText {
+  width: 100%;
+  height: 50px;
+  background: rgb(76, 176, 80);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 0 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.container .genButton:hover,
+.container .apagarText:hover {
+  background: rgb(132, 191, 101);
+}
+
+#imgBox {
+  width: 100%;
+  height: 100%;
+}
+
+#imgBox img {
+  width: 100%;
+  padding: 10px;
+}
+
+#imgBox.show-img {
+  max-height: fit-content;
+  overflow: visible;
+}
+
+#qrText {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border: none;
+  background: rgb(230, 230, 230);
+  margin-top: 10px;
+  outline: none;
+  padding: 20px;
+  font-size: 0.85rem;
+}
+
+.grayBack {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+}
+
+.grayBackShowUp {
+  visibility: visible;
+}
+
+.modal {
+  width: 350px;
+  height: 350px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.modalShowUp {
+  visibility: visible;
+}
+
+.closeBtn {
+  position: absolute;
+  right: -17px;
+  top: -17px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn:hover {
+  background: rgb(132, 191, 101);
+}
+
+.modalError {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
+  background: red;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+
+.modalErrorShowUp {
+  visibility: visible;
+}

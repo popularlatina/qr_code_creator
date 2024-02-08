@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>QR Code Creator</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <img
+        src="./images/log-qr-code-gen.svg"
+        alt="Logo QR Code Creator"
+        class="logo"
+      />
+      <label for="qrText" class="qrLabel">Introduza o texto ou URL</label>
+      <textarea id="qrText"></textarea>
+
+      <div class="buttonContainer">
+        <button class="apagarText">Limpar caixa texto</button>
+        <button class="genButton">Gerar QR Code</button>
+      </div>
+
+      <div class="grayBack">
+        <div class="modal">
+          <i class="material-icons closeBtn">close</i>
+          <div id="imgBox">
+            <img src="" id="qrImage" />
+          </div>
+        </div>
+      </div>
+
+      <div class="modalError">
+        <p>Por favor introduza algo na caixa de texto para gerar o QR Code</p>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
