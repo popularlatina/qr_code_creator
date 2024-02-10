@@ -7,6 +7,7 @@ let modal = document.querySelector(".modal")
 let grayBack = document.querySelector(".grayBack")
 let closeBtn = document.querySelector(".closeBtn")
 let modalError = document.querySelector(".modalError")
+let printBtn = document.querySelector(".printBtn")
 
 //Põe o focus do cursor na TextArea
 
@@ -54,7 +55,6 @@ button.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   grayBack.classList.remove("grayBackShowUp")
   modal.classList.remove("modalShowUp")
-
   qrText.focus()
 })
 
@@ -72,3 +72,17 @@ document.addEventListener("keydown", (event) => {
 })
 
 //************************************************************ */
+
+//Botão para imprimir o QRCode
+
+printBtn.addEventListener("click", () => {
+  if (qrImage) {
+    // Adiciona a classe 'printable' ao #qrImage
+    qrImage.classList.add("printable")
+    window.print()
+    // Remove a classe 'printable' após a impressão
+    qrImage.classList.remove("printable")
+  } else {
+    console.log("error")
+  }
+})
